@@ -9,7 +9,7 @@ export const LoginForm = () => {
     <>
       <form>
         <label>
-          Email: 
+          Email:  
           <input
             type="text"
             value={email}
