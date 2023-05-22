@@ -1,0 +1,11 @@
+.sign-up-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up-form {
+  text-align: left;
+}/*# sourceMappingURL=SignUpForm.css.map */
