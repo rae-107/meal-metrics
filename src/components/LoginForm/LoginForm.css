@@ -1,1 +1,27 @@
-/*# sourceMappingURL=LoginForm.css.map */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.login-form {
+  width: 50vw;
+  height: 50vh;
+  background-color: #FDBC2E;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-here {
+  font-size: 2em;
+}
+
+.login-inputs,
+.login-button {
+  margin: 10px;
+}/*# sourceMappingURL=LoginForm.css.map */
