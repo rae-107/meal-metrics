@@ -4,10 +4,10 @@ import "./LoginForm.css";
 export const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  // consider making state here for currently logged in user
 
   const getUser = async (e) => {
     e.preventDefault()
-    console.log(username)
     const res = await fetch(`http://localhost:8080/user/${username}`)
     const data = await res.json()
     if (data.password === password) {
@@ -29,7 +29,7 @@ export const LoginForm = () => {
             value={username}
             name="username"
             onChange={(e) => setUsername(e.target.value)}
-            placeholder="Email"
+            placeholder="Username"
           />
         </label>
         <label className="login-label" >

@@ -8,4 +8,24 @@
 
 .sign-up-form {
   text-align: left;
+  width: 50vw;
+  height: 60vh;
+  background-color: #FDBC2E;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up-here {
+  font-size: 2em;
+}
+
+.sign-up-labels {
+  display: none;
+}
+
+.sign-up-labels,
+.sign-up-inputs {
+  margin: 0.75em;
 }/*# sourceMappingURL=SignUpForm.css.map */
