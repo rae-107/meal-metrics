@@ -1,0 +1,29 @@
+@use "../../abstract/styles" as *;
+
+.header {
+  background-color: $yellow;
+  border-bottom: solid 3px #E4A722;
+  height: 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meal-metrics {
+  margin: 0 0 0 30px;
+  font-size: $h1Font;
+  font-weight: 300;
+}
+
+.account-container {
+  margin: 0 30px;
+}
+
+.account-container > button {
+  margin: 10px;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}

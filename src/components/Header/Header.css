@@ -1,0 +1,29 @@
+.header {
+  background-color: #FDBC2E;
+  border-bottom: solid 3px #E4A722;
+  height: 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meal-metrics {
+  margin: 0 0 0 30px;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.account-container {
+  margin: 0 30px;
+}
+
+.account-container > button {
+  margin: 10px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}/*# sourceMappingURL=Header.css.map */
