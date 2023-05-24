@@ -11,6 +11,7 @@
   margin: 0 0 0 30px;
   font-size: 2em;
   font-weight: 300;
+  cursor: pointer;
 }
 
 .account-container {

@@ -1,3 +1,4 @@
+import { Header } from "../Header/Header"
 import { LoginForm } from "../LoginForm/LoginForm"
 import { SignUpForm } from "../SignUpForm/SignupForm"
 
@@ -7,7 +8,7 @@ export const Home = () => {
 
   return (
     <main className="home-page" >
-      
+      <Header />
 
     </main>
   )
