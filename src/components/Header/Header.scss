@@ -3,7 +3,7 @@
 .header {
   background-color: $yellow;
   border-bottom: solid 3px #E4A722;
-  height: 28vw;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,10 +24,23 @@
 }
 
 .account-container > button {
-  margin: 10px;
+  margin: 5px;
   appearance: none;
   background-color: transparent;
   border: none;
   font-size: 1em;
   cursor: pointer;
+}
+
+@media screen and (min-width: 500px) {
+  .account-container {
+    flex-direction: row;
+  }
+  
+  .account-container > button {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 680px) {
 }

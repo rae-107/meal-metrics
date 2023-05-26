@@ -7,11 +7,12 @@
   height: 90vh;
   width: 100vw;
   text-align: center;
+  background-color: $white;
 }
 
 .login-form {
-  width: 50vw;
-  height: 50vh;
+  width: 300px;
+  height: 300px;
   background-color: $yellow;
   display: flex;
   flex-direction: column;
@@ -20,10 +21,11 @@
 }
 
 .login-here {
-  font-size: $h1Font;
+  font-size: 24px;
 }
 
 .login-inputs, 
 .login-button {
   margin: .5em;
+  font-size: 12px;
 }
