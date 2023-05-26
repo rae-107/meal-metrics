@@ -1,0 +1,42 @@
+.header {
+  background-color: #FDBC2E;
+  border-bottom: solid 3px #E4A722;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meal-metrics {
+  margin: 0 0 0 30px;
+  font-size: 2em;
+  font-weight: 300;
+  cursor: pointer;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.account-container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+.account-container > button {
+  margin: 5px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 500px) {
+  .account-container {
+    flex-direction: row;
+  }
+  .account-container > button {
+    font-size: 1em;
+  }
+}/*# sourceMappingURL=Header.css.map */

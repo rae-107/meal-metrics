@@ -1,0 +1,171 @@
+@use "../../abstract/styles" as *;
+
+.home-page {
+  background-color: $yellow;
+  height: 88vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.splash-pitch-container {
+  display: flex;
+  justify-content: center;
+  width: 350px;
+  overflow: hidden;
+}
+
+.welcome {
+  font-size: 30px;
+  width: 280px;
+}
+
+.splash-pitch,
+.opacity-sheet,
+.cooking-image {
+  width: 300px;
+  height: 320px;
+}
+
+.splash-pitch {
+  color: $white;
+  position: absolute;
+  z-index: 2;
+  width: 260px;
+  overflow: auto;
+  line-height: 50px;
+  font-size: 18px;
+}
+
+.opacity-sheet {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  z-index: 1;
+}
+
+.cooking-image {
+  position: relative;
+}
+
+.get-started {
+  width: 260px;
+  font-size: 28px;
+  margin-top: 40px;
+}
+
+.signing,
+.logging {
+  color: $white;
+  font-size: 34px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 500px) {
+  .splash-pitch-container {
+    width: 500px;
+  }
+
+  .splash-pitch,
+  .opacity-sheet,
+  .cooking-image {
+    height: 440px;
+    width: 480px;
+  }
+
+  .splash-pitch {
+    width: 420px;
+    font-size: 28px;
+    line-height: 80px;
+  }
+
+  .welcome,
+  .get-started {
+    width: 420px;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  .splash-pitch-container {
+    width: 620px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .splash-pitch,
+  .cooking-image {
+    position: relative;
+  }
+
+  .splash-pitch {
+    width: 240px;
+    font-size: 21px;
+    line-height: 55px;
+    height: 400px;
+  }
+
+  .cooking-image {
+    width: 300px;
+    height: 400px;
+  }
+
+  .opacity-sheet {
+    display: none;
+  }
+
+  .welcome,
+  .get-started {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .splash-pitch-container {
+    width: 920px;
+  }
+
+  .cooking-image {
+    width: 420px;
+  }
+
+  .splash-pitch {
+    width: 300px;
+    font-size: 26px;
+    line-height: 56px;
+    height: 400px;
+  }
+
+  .welcome {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .splash-pitch-container {
+    width: 1300px;
+  }
+
+  .splash-pitch {
+    width: 375px;
+    font-size: 28px;
+    line-height: 80px;
+    height: 480px;
+  }
+
+  .cooking-image {
+    width: 600px;
+    height: 480px;
+  }
+
+  .welcome,
+  .get-started {
+    font-size: 36px;
+  }
+
+  .signing,
+  .logging {
+    font-size: 44px;
+  }
+}
