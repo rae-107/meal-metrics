@@ -17,7 +17,7 @@ export const Home = () => {
             you're getting from each meal!
           </h3>
           <div className="opacity-sheet"></div>
-          <img src="/assets/cooking.jpg" className="cooking-image" />
+          <img alt="Table filled with ingredients and two people cooking together" src="/assets/cooking.jpg" className="cooking-image" />
         </div>
         <h2 className="get-started" >
           Get started right now by{" "}
