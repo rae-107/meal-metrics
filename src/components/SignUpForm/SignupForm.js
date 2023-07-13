@@ -1,15 +1,13 @@
 import { useState } from "react";
 import "./SignUpForm.css";
-import { Header } from "../Header/Header";
 
-export const SignUpForm = () => {
+export const SignUpForm = ({ setSessionId, setCurrentUser }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [birthday, setBirthday] = useState("");
-  // consider making state here for currently logged in user
 
   const createUser = async (e) => {
     e.preventDefault();
@@ -27,11 +25,14 @@ export const SignUpForm = () => {
         headers: { "Content-Type": "application/json" },
       });
       const data = await res.json();
-      clearInputs();
       console.log(data);
+      localStorage.setItem('meal_metrics_sessionId', data[1])
+      setCurrentUser(data[0])
+      setSessionId(data[1])
+      clearInputs();
       return data;
-    } catch {
-      console.log('sign up form broke :/')
+    } catch (error) {
+      console.log('sign up form broke :/', error)
     }
   };
 
@@ -46,7 +47,6 @@ export const SignUpForm = () => {
 
   return (
     <>
-      <Header />
       <section className="sign-up-page">
         <form className="sign-up-form">
           <h1 className="sign-up-here">Sign Up Here</h1>
