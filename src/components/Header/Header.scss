@@ -17,6 +17,10 @@
   text-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
 }
 
+.user-dropdown {
+  margin-right: 30px;
+}
+
 .account-container {
   display: flex;
   flex-direction: column;
@@ -36,7 +40,7 @@
   .account-container {
     flex-direction: row;
   }
-  
+
   .account-container > button {
     font-size: 1em;
   }
