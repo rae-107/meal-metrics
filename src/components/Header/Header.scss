@@ -44,29 +44,37 @@
   display: block;
   position: absolute;
   background-color: $white;
-  opacity: .85;
-  z-index: 2;
+  z-index: 3;
   width: 130px;
   margin-top: 10px;
+  border-radius: 10px;
 }
 
 .dropdown-box > p {
-  text-decoration: none;
   display: block;
-  padding: 10px 10px;
+  padding: 8px 10px;
+  margin: 0;
 }
 
 .dropdown-box > p:hover {
   cursor: pointer;
-  background-color: gray;
+  font-weight: 200;
+  background-color: lightblue;
+  transition: .7s
+}
+
+.account {
+  border-radius: 10px 10px 0 0;
 }
 
 .settings {
   border-bottom: 1px solid black;
+  padding-bottom: 12px !important;
 }
 
 .log-out {
-  padding: 0;
+  margin: 10px 0;
+  border-radius: 0 0 10px 10px;
 }
 
 // If user isn't signed in

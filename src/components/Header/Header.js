@@ -37,7 +37,7 @@ export const Header = ({ currentUser }) => {
           {isDropdownOpen && 
           // This is the content of the dropdown 
             <div className="dropdown-box" >
-              <p onClick={() => navigate("/login")} >Account</p>
+              <p className="account" onClick={() => navigate("/login")} >Account</p>
               <p>Recipes</p>
               <p>Ingredients</p>
               <p className="settings" >Settings</p>
