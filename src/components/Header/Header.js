@@ -9,11 +9,11 @@ export const Header = ({ currentUser, setCurrentUser }) => {
 
   let firstName;
 
-  if (currentUser.first_name) {
+  if (currentUser?.first_name) {
     firstName =
       currentUser?.first_name[0].toUpperCase() +
       currentUser?.first_name.slice(1);
-  }
+  } 
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
