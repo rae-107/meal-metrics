@@ -11,7 +11,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
 
   useEffect(() => {
-    fetchData().then((data) => console.log("useEffect", data));
+    fetchData().then((data) => setCurrentUser(data));
   }, []);
 
   const fetchData = async () => {
@@ -22,7 +22,7 @@ function App() {
       const res = await fetch(`http://localhost:8080/user/${localStorageSessionId}`);
       const data = await res.json();
       setCurrentUser(data)
-      console.log("app line 24", data);
+      console.log("app line 25", data);
       return data;
     }
   };
