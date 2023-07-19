@@ -29,7 +29,7 @@ function App() {
 
   return (
     <>
-      <Header currentUser={currentUser} />
+      <Header currentUser={currentUser} setCurrentUser={setCurrentUser} />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./SignUpForm.css";
+import { useNavigate } from "react-router-dom";
 
 export const SignUpForm = ({ setSessionId, setCurrentUser }) => {
   const [username, setUsername] = useState("");
@@ -8,6 +9,8 @@ export const SignUpForm = ({ setSessionId, setCurrentUser }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [birthday, setBirthday] = useState("");
+
+  const navigate = useNavigate();
 
   const createUser = async (e) => {
     e.preventDefault();
@@ -26,13 +29,13 @@ export const SignUpForm = ({ setSessionId, setCurrentUser }) => {
       });
       const data = await res.json();
       console.log(data);
-      localStorage.setItem('meal_metrics_sessionId', data[1])
-      setCurrentUser(data[0])
-      setSessionId(data[1])
+      localStorage.setItem("meal_metrics_sessionId", data[1]);
+      setCurrentUser(data[0]);
+      setSessionId(data[1]);
       clearInputs();
       return data;
     } catch (error) {
-      console.log('sign up form broke :/', error)
+      console.log("sign up form broke :/", error);
     }
   };
 
@@ -116,7 +119,14 @@ export const SignUpForm = ({ setSessionId, setCurrentUser }) => {
               placeholder="Birthday"
             />
           </label>
-          <button onClick={(e) => createUser(e)}>Submit</button>
+          <button
+            onClick={(e) => {
+              createUser(e);
+              navigate("/");
+            }}
+          >
+            Submit
+          </button>
         </form>
       </section>
     </>
