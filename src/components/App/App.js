@@ -5,6 +5,11 @@ import { LoginForm } from "../LoginForm/LoginForm";
 import { SignUpForm } from "../SignUpForm/SignupForm";
 import { Header } from "../Header/Header";
 import { useState, useEffect } from "react";
+import { apiCall } from "../../apiCalls";
+
+// July 21st I'll start with adding ingredient funcitonality. 
+// I will need to set up the Ingredient API and have the ability to add a users own ingredient to my database. 
+// I'm going to have to do research on adding the USDA API to my database
 
 function App() {
   const [sessionId, setSessionId] = useState("");
@@ -12,6 +17,7 @@ function App() {
 
   useEffect(() => {
     fetchData().then((data) => setCurrentUser(data));
+    apiCall('chicken')
   }, []);
 
   const fetchData = async () => {
