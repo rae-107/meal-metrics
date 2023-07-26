@@ -30,6 +30,7 @@ export const Header = ({ currentUser, setCurrentUser }) => {
           <div className="users-name">
             <span className="users-first-name">{firstName}'s Account</span>
             <img
+              alt="Arrow for user account information"
               className="arrow"
               src="/assets/angle-small-down.png"
               onClick={toggleDropdown}
