@@ -1,13 +1,10 @@
-import { Header } from "../Header/Header";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
 export const Home = () => {
-  // consider making state here for currently logged in user
   const navigate = useNavigate();
   return (
     <main>
-      <Header />
       <section className="home-page">
         <h2 className="welcome" >Welcome to Meal Metrics!</h2>
         <div className="splash-pitch-container">

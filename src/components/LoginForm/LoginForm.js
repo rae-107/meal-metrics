@@ -1,11 +1,12 @@
 import { useState } from "react";
 import "./LoginForm.css";
-import { Header } from "../Header/Header";
+import { useNavigate } from "react-router-dom";
 
-export const LoginForm = () => {
+export const LoginForm = ({ setSessionId, setCurrentUser }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  // consider making state here for currently logged in user
+
+  const navigate = useNavigate();
 
   const authenticateUser = async (e) => {
     e.preventDefault();
@@ -21,17 +22,19 @@ export const LoginForm = () => {
         },
       });
       const data = await res.json();
-      console.log(data)
+      setCurrentUser(data[0]);
+      setSessionId(data[1]);
+      localStorage.setItem("meal_metrics_sessionId", data[1]);
       setUsername("");
       setPassword("");
-    } catch {
-      console.log('login form broke :/')
+      return data;
+    } catch (error) {
+      console.log("login form broke :/", error);
     }
   };
 
   return (
     <>
-      <Header />
       <section className="login-page">
         <form className="login-form">
           <h1 className="login-here">Login Here</h1>
@@ -57,7 +60,13 @@ export const LoginForm = () => {
               placeholder="Password"
             />
           </label>
-          <button className="login-button" onClick={(e) => authenticateUser(e)}>
+          <button
+            className="login-button"
+            onClick={(e) => {
+              authenticateUser(e);
+              navigate("/");
+            }}
+          >
             Submit
           </button>
         </form>

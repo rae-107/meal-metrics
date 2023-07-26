@@ -15,6 +15,65 @@
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  width: 130px;
+}
+
+.users-name {
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.dropdown-box {
+  display: block;
+  position: absolute;
+  background-color: #FCFBFF;
+  z-index: 3;
+  width: 130px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.dropdown-box > p {
+  display: block;
+  padding: 8px 10px;
+  margin: 0;
+}
+
+.dropdown-box > p:hover {
+  cursor: pointer;
+  font-weight: 200;
+  background-color: lightblue;
+  transition: 0.7s;
+}
+
+.account {
+  border-radius: 10px 10px 0 0;
+}
+
+.settings {
+  border-bottom: 1px solid black;
+  padding-bottom: 12px !important;
+}
+
+.log-out {
+  margin: 10px 0;
+  border-radius: 0 0 10px 10px;
+}
+
 .account-container {
   display: flex;
   flex-direction: column;
